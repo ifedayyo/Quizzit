@@ -13,8 +13,10 @@ export default function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Homepage />} />
+
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/signup" element={<Signup />} />
+
           {/* <Route path="firstproject" element={<FirstProject />} />
            */}
         </Routes>
@@ -33,10 +35,10 @@ function NavBar() {
         width="100"
         height="50"
       />*/}
-
       <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
         Homepage
       </NavLink>
+
       <NavLink
         to="/quizzes"
         className={({ isActive }) => (isActive ? "active" : "")}
