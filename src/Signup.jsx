@@ -6,8 +6,8 @@ export default function Signup() {
       everywhere. Interestingly there is no bullets around. but the neurons keep
       firringgg. hahahahaha! I want to fire you like a neuron, just without
       bullet. hahahahaha. Don't mind the craziness above. Fire away, and sign up
-      for our quizzes so you can get those neurons workkinggg. hahahahaha return
-      (
+      for our quizzes so you can get those neurons workkinggg. hahahahaha
+      return.
       <>
         <form className="form-styling">
           <input
