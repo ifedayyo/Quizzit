@@ -5,6 +5,7 @@ import Homepage from "./Homepage";
 import Quizzes from "./Quizzes";
 import Signup from "./Signup";
 import { NavLink } from "react-router-dom";
+import SignIn from "./SignIn";
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
 
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/signup" element={<Signup />} />
-
+          <Route path="/signin" element={<SignIn />} />
           {/* <Route path="firstproject" element={<FirstProject />} />
            */}
         </Routes>
@@ -50,6 +51,13 @@ function NavBar() {
         className={({ isActive }) => (isActive ? "active" : "")}
       >
         Sign Up
+      </NavLink>
+
+      <NavLink
+        to="/signin"
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
+        Sign In
       </NavLink>
     </div>
   );

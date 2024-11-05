@@ -1,13 +1,25 @@
+import { Link } from "react-router-dom";
+
 export default function Signup() {
   return (
     <div>
-      We are all humans, and sometimes we want to feel our brain cells firing
-      rapidly shooting those damn guns, causing chaos and commotioon, scattering
-      everywhere. Interestingly there is no bullets around. but the neurons keep
-      firringgg. hahahahaha! I want to fire you like a neuron, just without
-      bullet. hahahahaha. Don't mind the craziness above. Fire away, and sign up
-      for our quizzes so you can get those neurons workkinggg. hahahahaha
-      return.
+      <p>
+        We are all humans, and sometimes we want to feel our brain cells firing
+        rapidly shooting those damn guns, causing chaos and commotioon,
+        scattering everywhere. Interestingly there is no bullets around. but the
+        neurons keep firringgg. hahahahaha! I want to fire you like a neuron,
+        just without bullet. hahahahaha.
+        <br />
+        <br />
+        Don't mind the craziness above. Fire away, and sign up for our quizzes
+        so you can get those neurons workkinggg. hahahahaha return.
+      </p>
+
+      <i>
+        {" "}
+        Have an account already? Log in
+        <Link to="/signin"> Here</Link>
+      </i>
       <>
         <form className="form-styling">
           <input
