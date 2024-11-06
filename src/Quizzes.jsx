@@ -53,6 +53,8 @@ export default function Quizzes() {
    }
         you can set the function equal to a variable...
 
+        NOTE: The await keyword must only be used
+        inside an asynchronous function or module
         
    */
 }
