@@ -55,6 +55,14 @@ export default function Quizzes() {
 
         NOTE: The await keyword must only be used
         inside an asynchronous function or module
-        
+
+        NOTEE: In the async/await version, the result
+        of the promise is directly assigned to a variable
+        e.g. const response = await fetch()
+        const json = await response.json();
+        In the standard promise version, the result of the 
+        promise is passed as an argument to the
+        .then() method
+
    */
 }
