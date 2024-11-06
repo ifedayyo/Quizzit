@@ -1,4 +1,4 @@
-import "App/css";
+import "./App.css";
 export default function SignIn() {
   return (
     <div>
@@ -8,25 +8,16 @@ export default function SignIn() {
           id="fname"
           className="input-styling"
           name="fname"
-          placeholder="First name:"
+          placeholder="Name:"
           required
         />
 
         <input
-          type="text"
-          id="lname"
-          className="input-styling"
-          name="lname"
-          placeholder="Last name"
-          required
-        />
-
-        <input
-          type="email"
+          type="password"
           id="email"
           className="input-styling"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Enter your password"
           required
         />
         <button className="button-styling">SUBMIT</button>
