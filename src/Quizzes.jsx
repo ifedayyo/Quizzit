@@ -17,7 +17,7 @@ export default function Quizzes() {
         const data = await response.json();
         setQuizData(data);
       } catch (error) {
-        setError(error);
+        setError(error.message);
       } finally {
         setIsLoading(false);
       }
@@ -34,9 +34,17 @@ export default function Quizzes() {
       ) : (
         //<p> Error: {error.message}</p>
         <div>
-          {quizData?.map((question) => (
-            <div key={question.id}>{quizData.question}</div>
+          if (quizData)
+          {quizData.map((question) => {
+            <div key={question.id}>{question.text}</div>;
+          })}
+          else{<p>There is an error `${error.message}`</p>}
+          {/**
+           *  {quizData?.map((question) => (
+            <div key={question.id}>{question.text}</div>
           ))}
+           * 
+           */}
         </div>
       )}
     </div>
