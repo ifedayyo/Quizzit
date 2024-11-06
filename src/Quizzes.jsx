@@ -5,11 +5,12 @@ export default function Quizzes() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const quizURL = `https://the-trivia-api.com/v2/questions`;
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`https://the-trivia-api.com/v2/questions`);
+        const response = await fetch(quizURL);
         if (!response.ok) {
           throw new Error(`Couldn't fetch data: ${response.statusText}`);
         }
@@ -22,18 +23,19 @@ export default function Quizzes() {
       }
     };
     fetchData();
-  }, []);
+  }, [quizURL]);
 
   return (
     <div>
       {isLoading ? (
         <p>Loading...</p>
       ) : error ? (
-        <p> Error: {error.message}</p>
+        <p>{error.message}</p>
       ) : (
+        //<p> Error: {error.message}</p>
         <div>
-          {quizData.map((question) => (
-            <div key={question.id}></div>
+          {quizData?.map((question) => (
+            <div key={question.id}>{quizData.question}</div>
           ))}
         </div>
       )}
